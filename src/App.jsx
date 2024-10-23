@@ -35,7 +35,7 @@ function App() {
       <div
 
       >
-          <div className="main">
+          <div className="body">
               <Navbar bg="light" className="navbar-container" expand="lg">
                   <div
                   >
@@ -55,10 +55,21 @@ function App() {
                   </div>
               </Navbar>
 
-              <Container className="mt-5 ">
-                  <div>
-                      <h1 className="title">ZeDuc Sp@ce</h1>
-                      <h2 className="mb-4">Gestion des employés</h2>
+              <Container className="mt-5 main">
+                  <div
+                      className="main-header"
+                  >
+                      <div
+                          className="header-img"
+                      ></div>
+                      <div>
+                          <span className="title">ZeDuc Sp@ce</span>
+                          <span className="title2">Gestion des employés</span>
+                      </div>
+
+                      <div
+                          className="header-img"
+                      ></div>
                   </div>
                   <div
                       className="table-container"
@@ -69,7 +80,9 @@ function App() {
                           Liste des employés
 
                           <div>
-                              insére image ici
+                              <Button className="modal-btn" variant="primary" onClick={handleShow}>
+                                  Ajouter un employé
+                              </Button>
                           </div>
                       </div>
 
@@ -108,16 +121,21 @@ function App() {
 
                   </div>
 
-                  <Button variant="primary" onClick={handleShow}>
-                      Ajouter un employé
-                  </Button>
 
-                  <Modal show={show} onHide={handleClose}>
-                      <Modal.Header closeButton>
+
+                  <Modal
+                      className="modal-wrapper"
+                      show={show} onHide={handleClose}>
+                      <Modal.Header closeButton
+
+                      >
                           <Modal.Title>Ajouter un employé</Modal.Title>
+
                       </Modal.Header>
                       <Modal.Body>
-                          <Form>
+                          <Form
+                              className="modal-form"
+                          >
                               <Form.Group controlId="formName">
                                   <Form.Label>Nom</Form.Label>
                                   <Form.Control
@@ -188,16 +206,40 @@ function App() {
                   </Modal>
               </Container>
 
-              <footer className="mt-5 p-4 bg-light text-center">
-                  <p>Informations | Aide | À propos</p>
-                  <p>Accès utilisateur: se connecter | inscrire</p>
-                  <p>Localisation: Cité la Terrasse, Yansoki, Douala</p>
+              <footer className="mt-5 p-4 bg-light text-center footer">
+                  <div>
+                      logo
+                  </div>
+                  <div
+                      className="footer-element"
+                  >
+                      <p>Informations</p>
+                      <span>Aide</span>
+                      <span>À propos</span>
+                  </div>
+                  <div
+                      className="footer-element"
+                  >
+                      <p>Accès utilisateur</p>
+                      <span>Se connecter</span>
+                      <span>S'inscrire</span>
+                  </div>
+                  <div
+                      className="footer-element"
+                  >
+                      <p>Localisation</p>
+                      <span>Cité la Terrasse</span>
+                      <span>Yansoki, Douala</span>
+                  </div>
+                  <div>
+                      whatsapp img
+                  </div>
               </footer>
 
           </div>
       </div>
     </>
-  )
+    )
 }
 
 export default App

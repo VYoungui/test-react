@@ -1,10 +1,12 @@
 body{
   margin: 0;
-  
+  background: linear-gradient(to bottom, #fff, #888);
 }
 
-.main{
+.body{
   width: 100%;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .navbar-container{
@@ -26,7 +28,6 @@ body{
   text-decoration: none;
 }
 
-
 a {
   font-weight: 500;
   color: goldenrod;
@@ -47,19 +48,80 @@ a:hover {
   display: flex;
 }
 
-.table-container{
+
+.main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:4rem;
+
+}
+
+.main-header>div{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
   border: 1px solid black;
+}
+
+.main-header{
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.title{
+  font-size: 3rem;
+  border: 1px solid;
+  font-weight: 600;
+}
+
+.title2{
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.header-img{
+  border: 1px solid black;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 99px;
+}
+
+
+.table-container{
   display: flex;
   flex-direction: column;
   margin: auto;
   gap: 2rem;
-  width: 85%;
+  width: 75%;
 }
 
 .employe-list{
   border: 1px solid black;
   display: flex;
   justify-content: space-between;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.modal-btn{
+  border-radius: 5px;
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+  font-size: 1.1rem;
+  padding: 0.25rem;
+  cursor: pointer;
+}
+.modal-btn:hover{
+  background-color: goldenrod;
+  border: none;
 }
 
 .table-wrapper{
@@ -68,25 +130,30 @@ a:hover {
   justify-content: space-between;
   margin: auto;
   border-radius: 10px;
-  width: 85%;
+  width: 100%;
   overflow: hidden;
   height: 20rem;
+  background-color: white;
 }
 
 .styled-table{
   border-collapse: collapse;
   width: 100%;
-  border: 1px solid #535bf2;
-  height: 12rem;
+  height: 60%;
 }
 
 thead{
   background-color: #C4C8D4;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .th-top-right{
   border-top-right-radius: 10px;
+}
+
+th{
+  min-width: 2rem;
 }
 
 .th-top-left{
@@ -94,8 +161,72 @@ thead{
 }
 td {
   border-bottom: 1px solid black;
+
+  margin: 1rem;
+  text-align: center;
 }
 
 tr{
   height: 2rem;
+
+}
+
+.footer{
+  width: 100%;
+  border: 1px solid;
+  display: flex;
+  height: 10rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-element{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-element>p{
+  font-size: 1.25rem;
+}
+
+.footer-element>span{
+  text-decoration: underline;
+}
+
+.modal-wrapper{
+  border: 1px solid;
+  width: 24rem;
+  display: flex;
+  justify-content: center;
+}
+
+.modal-form{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+}
+
+/* Style de la scrollbar */
+::-webkit-scrollbar {
+  width: 12px; /* Largeur de la scrollbar */
+}
+
+/* Style de la piste de la scrollbar */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Couleur de la piste */
+  border-radius: 10px; /* Ajoute un effet arrondi */
+}
+
+/* Style de la barre de défilement */
+::-webkit-scrollbar-thumb {
+  background: #888; /* Couleur de la barre */
+  border-radius: 10px; /* Arrondit les bords de la barre */
+  border: 3px solid #f1f1f1; /* Ajoute un peu d'espace autour de la barre */
+}
+
+/* Change la couleur de la barre au survol */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Couleur au survol */
 }
