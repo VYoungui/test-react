@@ -1,20 +1,25 @@
+body{
+  margin: 0;
+  
+}
+
 .main{
-  border: 1px solid black;
   width: 100%;
-
-
 }
 
 .navbar-container{
-  border: 1px solid black;
   display: flex;
   justify-content: space-between;
   min-width: 100%;
+  height: 6rem;
+  align-items: center;
+  background-color: black;
+  color: goldenrod;
+  border-bottom: 1px solid white;
 
 }
 
 .navbar{
-  border: 1px solid black;
   display: flex;
   width: 46rem;
   justify-content: space-between;
@@ -24,11 +29,16 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: goldenrod;
   text-decoration: inherit;
+  padding: 0.5rem;
 }
 a:hover {
-  color: #535bf2;
+  color: black;
+  background-color: goldenrod;
+  border-radius: 5px;
+  font-weight: bold;
+
 }
 
 
@@ -52,11 +62,40 @@ a:hover {
   justify-content: space-between;
 }
 
-.table-content{
+.table-wrapper{
   border: 1px solid;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
   border-radius: 10px;
+  width: 85%;
+  overflow: hidden;
+  height: 20rem;
 }
 
-tr, td {
-  border: 1px solid black;
+.styled-table{
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #535bf2;
+  height: 12rem;
+}
+
+thead{
+  background-color: #C4C8D4;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.th-top-right{
+  border-top-right-radius: 10px;
+}
+
+.th-top-left{
+  border-top-left-radius: 10px;
+}
+td {
+  border-bottom: 1px solid black;
+}
+
+tr{
+  height: 2rem;
 }

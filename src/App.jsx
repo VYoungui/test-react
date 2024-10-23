@@ -72,28 +72,40 @@ function App() {
                               insére image ici
                           </div>
                       </div>
-                  <Table className="table-content" striped bordered hover>
-                      <thead>
-                      <tr>
-                          <th>ID</th>
-                          <th>Nom</th>
-                          <th>Email</th>
-                          <th>Numéro de Téléphone</th>
-                          <th>Rôle</th>
-                      </tr>
-                      </thead>
-                      <tbody>
-                      {employees.map((employee) => (
-                          <tr key={employee.id}>
-                              <td>{employee.id}</td>
-                              <td>{employee.name}</td>
-                              <td>{employee.email}</td>
-                              <td>{employee.phone}</td>
-                              <td>{employee.role}</td>
-                          </tr>
-                      ))}
-                      </tbody>
-                  </Table>
+
+                      <div
+                          className="table-wrapper"
+                      >
+                          <Table className="styled-table" striped bordered hover>
+                              <thead>
+                              <tr>
+                                  <th
+                                      className="th-top-left"
+                                  >ID</th>
+                                  <th>Nom</th>
+                                  <th>Email</th>
+                                  <th>Numéro de Téléphone</th>
+                                  <th
+                                      className="th-top-right"
+                                  >Rôle</th>
+                              </tr>
+                              </thead>
+                              <tbody>
+                              {employees.map((employee) => (
+                                  <tr key={employee.id}
+
+                                  >
+                                      <td>{employee.id}</td>
+                                      <td>{employee.name}</td>
+                                      <td>{employee.email}</td>
+                                      <td>{employee.phone}</td>
+                                      <td>{employee.role}</td>
+                                  </tr>
+                              ))}
+                              </tbody>
+                          </Table>
+                      </div>
+
                   </div>
 
                   <Button variant="primary" onClick={handleShow}>
